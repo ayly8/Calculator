@@ -2,47 +2,73 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"> -->
-       <link rel="stylesheet" href="/static/css/style.css">
+      <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
       <title>Calculator</title>
    </head>
    <body>
-      <!-- <script src="{{url_for('static', filename='js/script.js')}}"></script> -->
+      <script src="{{url_for('static', filename='js/script.js')}}"></script>
       <div id="calculator">
-         <input id="num-display" readonly>
+         <input id="display" readonly>
          <div id="keys">
             <div class="key-row">
-               <button onclick="appendNums('sin')">sin</button>
-               <button onclick="appendNums('7')">7</button>
-               <button onclick="appendNums('8')">8</button>
-               <button onclick="appendNums('9')">9</button>
-               <button onclick="appendNums('/')">/</button>
+               <!-- <button onclick="append_display('sin')">sin</button>
+               <button onclick="append_display('7')">7</button>
+               <button onclick="append_display('8')">8</button>
+               <button onclick="append_display('9')">9</button>
+               <button onclick="append_display('/')">/</button> -->
+               <button onclick="display.value += 'sin'">sin</button>
+               <button onclick="display.value += '7'">7</button>
+               <button onclick="display.value += '8'">8</button>
+               <button onclick="display.value += '9'">9</button>
+               <button onclick="display.value += '/'">/</button>
             </div>
             <div class="key-row">
-               <button onclick="appendNums('cos')">cos</button>
-               <button onclick="appendNums('4')">4</button>
-               <button onclick="appendNums('5')">5</button>
-               <button onclick="appendNums('6')">6</button>
-               <button onclick="appendNums('*')">*</button>
+               <!-- <button onclick="append_display('cos')">cos</button>
+               <button onclick="append_display('4')">4</button>
+               <button onclick="append_display('5')">5</button>
+               <button onclick="append_display('6')">6</button>
+               <button onclick="append_display('*')">*</button> -->
+               <button onclick="display.value += 'cos'">cos</button>
+               <button onclick="display.value += '4'">4</button>
+               <button onclick="display.value += '5'">5</button>
+               <button onclick="display.value += '6'">6</button>
+               <button onclick="display.value += '*'">*</button>
             </div>
             <div class="key-row">
-               <button onclick="appendNums('tan')">tan</button>
-               <button onclick="appendNums('1')">1</button>
-               <button onclick="appendNums('2')">2</button>
-               <button onclick="appendNums('3')">3</button>
-               <button onclick="appendNums('-')">-</button>
+               <!-- <button onclick="append_display('tan')">tan</button>
+               <button onclick="append_display('1')">1</button>
+               <button onclick="append_display('2')">2</button>
+               <button onclick="append_display('3')">3</button>
+               <button onclick="append_display('-')">-</button> -->
+               <button onclick="display.value += 'tan'">tan</button>
+               <button onclick="display.value += '1'">1</button>
+               <button onclick="display.value += '2'">2</button>
+               <button onclick="display.value += '3'">3</button>
+               <button onclick="display.value += '-'">-</button>
             </div>
             <div class="key-row">
-               <button onclick="appendNums('log')">log</button>
-               <button onclick="appendNums('0')">0</button>
-               <button onclick="appendNums('.')">.</button>
+               <!-- <button onclick="append_display('log')">log</button>
+               <button onclick="append_display('0')">0</button>
+               <button onclick="append_display('.')">.</button>
                <button onclick="calculate()">=</button>
-               <button onclick="appendNums('+')">+</button>
+               <button onclick="append_display('+')">+</button> -->
+               <button onclick="display.value += 'log'">log</button>
+               <button onclick="display.value += '0'">0</button>
+               <button onclick="display.value += '.'">.</button>
+               <button onclick="calculate()">=</button>
+               <button onclick="display.value += '+'">+</button>
             </div>
             <div class="key-row">
-               <button onclick="appendNums('exp')">exp</button>
-               <button onclick="appendNums('^')">^</button>
-               <button onclick="clear()">C</button>
+               <!-- <button onclick="append_display('exp')">exp</button>
+               <button onclick="append_display('^')">^</button>
+               <button onclick="append_display('(')">(</button>
+               <button onclick="append_display(')')">)</button>
+               <button onclick="clear_display()">C</button> -->
+               <button onclick="display.value += 'exp'">exp</button>
+               <button onclick="display.value += '^'">^</button>
+               <button onclick="display.value += '('">(</button>
+               <button onclick="display.value += ')'">)</button>
+               <button onclick="clear_display()">C</button>
             </div>
          </div>
       </div>

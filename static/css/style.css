@@ -1,3 +1,5 @@
+/* pink palette: #fee5eb, #ffc2d2, #feb3c7, #fd8faa, #fb6f92*/
+
 body {
    margin: 0;
    display: flex;
@@ -14,9 +16,7 @@ body {
    overflow: hidden;
 }
 
-/* #fee5eb, #ffc2d2, #feb3c7, #fd8faa, #fb6f92*/
-
-#num-display{
+#display{
    width: 100%;
    height: 50px;
    padding: 20px;
