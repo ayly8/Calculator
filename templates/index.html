@@ -6,71 +6,46 @@
       <title>Calculator</title>
    </head>
    <body>
-      <script src="{{url_for('static', filename='js/script.js')}}"></script>
       <div id="calculator">
-         <input id="display" readonly>
+         <p id="display"></p>
          <div id="keys">
             <div class="key-row">
-               <!-- <button onclick="append_display('sin')">sin</button>
+               <button onclick="append_display('sin')">sin</button>
                <button onclick="append_display('7')">7</button>
                <button onclick="append_display('8')">8</button>
                <button onclick="append_display('9')">9</button>
-               <button onclick="append_display('/')">/</button> -->
-               <button onclick="display.value += 'sin'">sin</button>
-               <button onclick="display.value += '7'">7</button>
-               <button onclick="display.value += '8'">8</button>
-               <button onclick="display.value += '9'">9</button>
-               <button onclick="display.value += '/'">/</button>
+               <button onclick="append_display('/')">/</button>
             </div>
             <div class="key-row">
-               <!-- <button onclick="append_display('cos')">cos</button>
+               <button onclick="append_display('cos')">cos</button>
                <button onclick="append_display('4')">4</button>
                <button onclick="append_display('5')">5</button>
                <button onclick="append_display('6')">6</button>
-               <button onclick="append_display('*')">*</button> -->
-               <button onclick="display.value += 'cos'">cos</button>
-               <button onclick="display.value += '4'">4</button>
-               <button onclick="display.value += '5'">5</button>
-               <button onclick="display.value += '6'">6</button>
-               <button onclick="display.value += '*'">*</button>
+               <button onclick="append_display('*')">*</button>
             </div>
             <div class="key-row">
-               <!-- <button onclick="append_display('tan')">tan</button>
+               <button onclick="append_display('tan')">tan</button>
                <button onclick="append_display('1')">1</button>
                <button onclick="append_display('2')">2</button>
                <button onclick="append_display('3')">3</button>
-               <button onclick="append_display('-')">-</button> -->
-               <button onclick="display.value += 'tan'">tan</button>
-               <button onclick="display.value += '1'">1</button>
-               <button onclick="display.value += '2'">2</button>
-               <button onclick="display.value += '3'">3</button>
-               <button onclick="display.value += '-'">-</button>
+               <button onclick="append_display('-')">-</button>
             </div>
             <div class="key-row">
-               <!-- <button onclick="append_display('log')">log</button>
+               <button onclick="append_display('log')">log</button>
                <button onclick="append_display('0')">0</button>
                <button onclick="append_display('.')">.</button>
                <button onclick="calculate()">=</button>
-               <button onclick="append_display('+')">+</button> -->
-               <button onclick="display.value += 'log'">log</button>
-               <button onclick="display.value += '0'">0</button>
-               <button onclick="display.value += '.'">.</button>
-               <button onclick="calculate()">=</button>
-               <button onclick="display.value += '+'">+</button>
+               <button onclick="append_display('+')">+</button>
             </div>
             <div class="key-row">
-               <!-- <button onclick="append_display('exp')">exp</button>
+               <button onclick="append_display('exp')">exp</button>
                <button onclick="append_display('^')">^</button>
                <button onclick="append_display('(')">(</button>
                <button onclick="append_display(')')">)</button>
-               <button onclick="clear_display()">C</button> -->
-               <button onclick="display.value += 'exp'">exp</button>
-               <button onclick="display.value += '^'">^</button>
-               <button onclick="display.value += '('">(</button>
-               <button onclick="display.value += ')'">)</button>
                <button onclick="clear_display()">C</button>
             </div>
          </div>
       </div>
+      <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
    </body>
 </html>

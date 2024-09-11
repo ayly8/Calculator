@@ -22,7 +22,7 @@ def render_homepage():
 def evaluate_expression():
    # receives the user input and store it as x
    data = request.get_json()
-   x = data['x']
+   x = data.get('x')
    # puts the x into the prompt
    prompt = f"Evaluate {x}"
    # call the chatgpt api to get the suggested result

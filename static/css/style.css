@@ -25,6 +25,7 @@ body {
    border: none;
    background-color: #fb6f92;
    color: white;
+   text-wrap: wrap;
 }
 
 #keys{
