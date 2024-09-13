@@ -1,4 +1,4 @@
-/* pink palette: #fee5eb, #ffc2d2, #feb3c7, #fd8faa, #fb6f92*/
+/* pink palette colors: #fee5eb, #ffc2d2, #feb3c7, #fd8faa, #fb6f92*/
 
 body {
    margin: 0;
@@ -14,17 +14,18 @@ body {
    background-color: #fd8faa;
    border-radius: 16px;
    overflow: hidden;
+   width: 480px;
 }
 
 #display{
-   /* width: 100%; */
    height: 50px;
    padding: 20px;
-   font-size: 16px;
-   text-align: left;
+   font-size: 24px;
+   text-align: right;
    border: none;
    background-color: #fb6f92;
    color: white;
+   overflow: hidden;
    text-wrap: wrap;
 }
 

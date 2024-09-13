@@ -24,7 +24,7 @@ def evaluate_expression():
    eval_input = request.get_json()
    x = eval_input.get('input')
    # puts the x into the prompt
-   prompt = f"Please evaluate the expression: {x}"
+   prompt = f"Please evaluate the following expression and only give me the result: {x}"
    # call the chatgpt api to get the suggested result
    response = client.chat.completions.create(
                model="gpt-3.5-turbo",

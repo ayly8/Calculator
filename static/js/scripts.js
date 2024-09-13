@@ -1,8 +1,10 @@
+// appends numbers/symbols the user selects on the display field
 function append_display(input){
    const display = document.getElementById("display");
    display.innerText += input;
 }
 
+// clears the numbers/symbols on the display field
 function clear_display(){
    const display = document.getElementById("display");
    display.innerText = "";
