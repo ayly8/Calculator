@@ -20,18 +20,17 @@ def render_homepage():
 # create api endpoint called evaluate_expression to handle POST requests
 @app.route('/evaluate_expression', methods=['POST'])
 def evaluate_expression():
-   # receives the user input and store it as x
-   data = request.get_json()
-   x = data.get('x')
+   # receives the eval input and store it as x
+   eval_input = request.get_json()
+   x = eval_input.get('input')
    # puts the x into the prompt
-   prompt = f"Evaluate {x}"
+   prompt = f"Please evaluate the expression: {x}"
    # call the chatgpt api to get the suggested result
    response = client.chat.completions.create(
                model="gpt-3.5-turbo",
-               messages=[{"role": "user", 
-                        "content": prompt}],
+               messages=[{"role": "user", "content": prompt}],
                temperature=0.6,
-               max_tokens=4096,
+               max_tokens=100,
                top_p=1,
                frequency_penalty=0,
                presence_penalty=0

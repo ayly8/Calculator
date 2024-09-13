@@ -1,26 +1,26 @@
 function append_display(input){
    const display = document.getElementById("display");
-   display.innerHTML += input;
+   display.innerText += input;
 }
 
 function clear_display(){
    const display = document.getElementById("display");
-   display.innerHTML = "";
+   display.innerText = "";
 }
 
 function calculate(){
    const display = document.getElementById("display");
-   // send POST request to /evaluate_expression endpoint with the data from display field
+   // send POST request to /evaluate_expression endpoint with the eval input from display field
    fetch('/evaluate_expression', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
       },
-      body: JSON.stringify({x: display.innerHTML})
+      body: JSON.stringify({input: display.innerText})
    })
    .then(response => response.json())
    .then(data => {
       // updates display field with suggested result from chatgpt api
-      display.innerHTML = data.gpt_eval;
+      display.innerText = data.gpt_eval;
    });
 }
